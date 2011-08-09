@@ -1,10 +1,10 @@
-Adobe Illustrator & Indesign Ïà¹Ø½Å±¾£¬ËùÓĞ½Å±¾¾ù¿É×ÔÓÉÊ¹ÓÃ¼°·Ö·¢£¬Ê¹ÓÃ½Å±¾ÒıÆğµÄÎÊÌâÔğÈÎ×Ô¸º¡£
-ExtendScripts for Adobe Illustrator & Indesign, You are free to Share ¡ª to copy, distribute and transmit the work.
-×÷Õß: ÌøÈëÆ»¹û animalia
+ï»¿Adobe Illustrator & Indesign ç›¸å…³è„šæœ¬ï¼Œæ‰€æœ‰è„šæœ¬å‡å¯è‡ªç”±ä½¿ç”¨åŠåˆ†å‘ï¼Œä½¿ç”¨è„šæœ¬å¼•èµ·çš„é—®é¢˜è´£ä»»è‡ªè´Ÿã€‚
+ExtendScripts for Adobe Illustrator & Indesign, You are free to Share â€” to copy, distribute and transmit the work.
+ä½œè€…: è·³å…¥è‹¹æœ animalia
 
-¡¾ÌØ±ğÖÂĞ»¡¿: ²¿·Ö½Å±¾ÖĞÊ¹ÓÃdoEx.jsx¿â£¬ËµÃ÷ÈçÏÂ:
-/* doEx.jsx£ºjQueryïL¤Ë¥É¥­¥å¥á¥ó¥È¤Î¥ª¥Ö¥¸¥§¥¯¥È¤ò³é³ö¤¹¤ë¤«¤â
+ã€ç‰¹åˆ«è‡´è°¢ã€‘: éƒ¨åˆ†è„šæœ¬ä¸­ä½¿ç”¨doEx.jsxåº“ï¼Œè¯´æ˜å¦‚ä¸‹:
+/* doEx.jsxï¼šjQueryé¢¨ã«ãƒ‰ã‚­ãƒ¥ãƒ¡ãƒ³ãƒˆã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚’æŠ½å‡ºã™ã‚‹ã‹ã‚‚
  * Copyright 2010 kamiseto. All Rights Reserved.
  * ScriptClip    http://556.sub.jp/scriptclip/
- * ¤Ê¤Ë¤¹¤ë£¿ DTP + WEB   http://d.hatena.ne.jp/kamiseto/
+ * ãªã«ã™ã‚‹ï¼Ÿ DTP + WEB   http://d.hatena.ne.jp/kamiseto/
  */
