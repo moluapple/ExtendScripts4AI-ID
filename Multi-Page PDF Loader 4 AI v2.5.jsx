@@ -8,16 +8,16 @@ w.rangePnl.range.et.onChange = function () {
 	this.parent.rangeRb.value = true;
 };
 w.btn.buildBtn.onClick = function go() {
-	var start = new Date().getTime(),
-		finish, totalSeconds, minutes, seconds, pdfile = w.filePnl.et.text,
-		allPage = w.rangePnl.range.allRb.value,
-		pageRange = w.rangePnl.range.et.text,
-		createAbs = w.rangePnl.caGrp.artboardsCb.value,
-		gap = w.rangePnl.caGrp.et.text,
-		psArr = [], maxArr = pageArr = null,
-		targetDoc, sourceDoc, targetLayer, width, height, pageCount,
-		pdfOptions = app.preferences.PDFFileOptions,
-		oldInteractionPref = app.userInteractionLevel;
+    var start = new Date().getTime(),
+        finish, totalSeconds, minutes, seconds, pdfile = w.filePnl.et.text,
+        allPage = w.rangePnl.range.allRb.value,
+        pageRange = w.rangePnl.range.et.text,
+        createAbs = w.rangePnl.caGrp.artboardsCb.value,
+        gap = w.rangePnl.caGrp.et.text,
+        psArr = [], maxArr = null, pageArr = null,
+        targetDoc, sourceDoc, targetLayer, width, height, pageCount,
+        pdfOptions = app.preferences.PDFFileOptions,
+        oldInteractionPref = app.userInteractionLevel;
 	w.close(0);
 	app.userInteractionLevel = UserInteractionLevel.DONTDISPLAYALERTS;
 	pdfOptions.pageToOpen = 1;
