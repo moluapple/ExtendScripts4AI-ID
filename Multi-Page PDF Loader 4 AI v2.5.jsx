@@ -2,10 +2,10 @@
 w.rangePnl.caGrp.artboardsCb.enabled = w.rangePnl.caGrp.artboardsCb.value = app.version.split(".")[0] > 13;
 w.filePnl.loadBtn.onClick = function () {
 	var pdfile = File.openDialog('选择PDF文件', '*.pdf');
-	if (pdfile != null) w.filePnl.et.text = pdfile.fsName;
+	pdfile && w.filePnl.et.text = pdfile.fsName;
 };
 w.rangePnl.range.et.onChange = function () {
-	w.rangePnl.range.rangeRb.value = true;
+	this.parent.rangeRb.value = true;
 };
 w.btn.buildBtn.onClick = function go() {
 	var start = new Date().getTime(),
@@ -38,7 +38,7 @@ w.btn.buildBtn.onClick = function go() {
 	}
 	if (createAbs) {
 		var layers = activeDocument.layers;
-		layers[activeDocument.layers.length - 1].remove();
+		layers[layers.length - 1].remove();
 		psArr = psArr.reverse();
 		for (var k = layers.length - 1; k >= 0; k--) {
 			if (layers[k].groupItems.length > 0) {
@@ -126,7 +126,7 @@ function getPDFPageCount(f) {
 
 //by Paul MR, http://www.ps-scripts.com/bb/viewtopic.php?f=13&t=2769&start=0#p12035
 function getPDFCount_Br(file) {
-	var f = File(file),
+	var f = new File(file),
 		data, timeOutAt, currentTime, bt = new BridgeTalk();
 	bt.target = "bridge";
 	bt.body = 'function a(){app.document.setPresentationMode("browser","' + f.path + '");tn = new Thumbnail( File("' + f + '") ); return tn.core.itemContent.pageCount}a();';
