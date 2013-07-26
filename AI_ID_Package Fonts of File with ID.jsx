@@ -51,7 +51,7 @@ function packageFonts(arr, oFolder) {
         return -1
     }
 
-    var oFile, oName, fontInfo, fontName, fontFiles, psNameArr, index, n,
+    var oFile, oName, fontInfo, fontName, fontFiles, index, n,
         psNameArr = String(app.fonts.everyItem().postscriptName).split(','),
         arr = arr.split('###'),
         ln = arr.length,
@@ -70,7 +70,7 @@ function packageFonts(arr, oFolder) {
             oName = oFolder + '/' + fontFiles[n];
             try {
                 oFile.copy(File(oName), true)
-            } catch (e) {alert(e)}
+            } catch (e) {}
         }
     }
 };
