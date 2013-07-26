@@ -1,8 +1,11 @@
-﻿Adobe Illustrator & Indesign 相关脚本，所有脚本均可自由使用及分发，使用脚本引起的问题责任自负。
-ExtendScripts for Adobe Illustrator & Indesign, You are free to Share — to copy, distribute and transmit the work.
-作者: 跳入苹果 animalia
+﻿Adobe Illustrator & Indesign 脚本
+ExtendScripts for Adobe Illustrator & Indesign, distributed under the MIT License.
+See the LICENSE file for details. 
 
-【特别致谢】: 部分脚本中使用doEx.jsx库，说明如下:
+Copyright(c) 2013 跳入苹果(animalia)
+http://applia.tumblr.com/
+=====
+【特别致谢】部分脚本中使用doEx.jsx库，相关声明如下:
 /* doEx.jsx：jQuery風にドキュメントのオブジェクトを抽出するかも
  * Copyright 2010 kamiseto. All Rights Reserved.
  * ScriptClip    http://556.sub.jp/scriptclip/
