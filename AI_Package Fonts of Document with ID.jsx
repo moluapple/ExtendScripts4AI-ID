@@ -11,7 +11,7 @@
     return arr;
 }
 
-function packageFonts(fontInfo, oFolder) {
+function packageFonts(arr, oFolder) {
     /*为数组添加 indexOf 方法*/
     Array.prototype.indexOf = function (obj, start) {
         for (var i = (start || 0), j = this.length; i < j; i++) {
@@ -22,21 +22,27 @@ function packageFonts(fontInfo, oFolder) {
         return -1
     }
 
-    var oFile, oName, i = 0,
-        fontInfo = fontInfo.split(','),
-        fontName = fontInfo[0],
-        fontFiles = fontInfo[1].split('; '),
+    var oFile, oName, fontInfo, fontName, fontFiles, psNameArr, index, n,
         psNameArr = String(app.fonts.everyItem().postscriptName).split(','),
-        index = psNameArr.indexOf(fontName),
+        arr = arr.split('###'),
+        ln = arr.length,
+        i = 0;
+
+    for (; i < ln; i++) {
+        fontInfo = arr[i].split(',');
+        fontName = fontInfo[0];
+        fontFiles = fontInfo[1].split('; ');
         /*使用 indexOf 通过 postscript 名称找出该字体对象 */
+        index = psNameArr.indexOf(fontName);
         oPath = File(app.fonts[index].location).parent;
 
-    for (; i < fontFiles.length; i++) {
-        oFile = File(oPath + '/' + fontFiles[i]);
-        oName = oFolder + '/' + fontFiles[i];
-        try {
-            oFile.copy(File(oName), true)
-        } catch (e) {}
+        for (n = 0; n < fontFiles.length; n++) {
+            oFile = File(oPath + '/' + fontFiles[n]);
+            oName = oFolder + '/' + fontFiles[n];
+            try {
+                oFile.copy(File(oName), true)
+            } catch (e) {}
+        }
     }
 };
 
@@ -47,12 +53,10 @@ function main() {
         bt;
 
     oFolder.create();
-    for (i = 0; i < arr.length; i++) {
-        bt = new BridgeTalk();
-        bt.target = "indesign";
-        bt.body = packageFonts.toSource() + '("' + arr[i] + '", "' + oFolder + '")';
-        bt.send();
-    }
+    bt = new BridgeTalk();
+    bt.target = "indesign";
+    bt.body = packageFonts.toSource() + '("' + arr.join('###') + '", "' + oFolder + '")';
+    bt.send();
     oFolder.execute();
 }
 
